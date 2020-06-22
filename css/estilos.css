@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    font-family: 'Chelsea Market', cursive;
+}
+th {
+    background-color:#ffe2ff;
+}
+td {
+    border:solid 3px #7f78d2;
+}
+h1 {
+    color: #efb1ff;
+    background-color:#481380;
+    padding: 20px;
+}
+.resaltado-uno {
+    background-color:#ffe2ff;
+    color: #481380;
+}
