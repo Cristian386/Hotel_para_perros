@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta/edición de mascotas</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Citas de servicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catálogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="marcas_formulario.html"><i class="fa fa-truck-pickup"></i> Marcas</a>
+                        <a class="dropdown-item" href="modelos_formulario.html"><i class="fa fa-list-ul"></i> Modelos</a>
+                        <a class="dropdown-item" href="usuarios.html"><i class="fa fa-users"></i> Usuarios</a>
+                        <a class="dropdown-item" href="propietarios.html"><i class="fa fa-user-tie"></i> Propietarios</a>
+                        <a class="dropdown-item" href="automoviles.html"><i class="fa fa-car"></i> Automóviles</a>
+                        <a class="dropdown-item" href="servicios_autopartes.html"><i class="fa fa-tools"></i> Servicios/autopartes</a>
+                        <a class="dropdown-item" href="citas.html"><i class="fa fa-calendar-alt"></i> Citas</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-users"></i> Mascotas
+                <a class="btn btn-ligth btn-sm float-rigth " href="mascota.html"><i class="fa fa-arrow-circle-left"> regresar</i></a>
+            </div>
+            <div class="card-body">
+                <form action="usuarios_guardar.php" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="raza">Raza</label>
+                        <select class="form-control form-control-sm" id="raza" name="raza">
+                            <option value="">Selecciona</option>
+                            <option value="1">Pastor aleman</option>
+                            <option value="2">Chihuahua</option>
+                            <option value="3">Buldog</option>
+                            <option value="4">Labrador</option>
+                            <option value="5">Rottweiler</option>
+                            <option value="6">Pomerania</option>
+                            <option value="7">Husky</option>
+                            <option value="8">Gran Danes</option>
+                            <option value="9">Dalmata</option>
+                            <option value="10">Pit bull</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="text" class="form-control form-control-sm" id="fecha_nacimiento" name="fecha_nacimiento" aria-describedby="fecha_nacimiento_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="propietario">Propietario</label>
+                        <input type="text" class="form-control form-control-sm" id="Nombre_propietario" name="Nombre_propietario" aria-describedby="Nombre_propietario_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre_personal">Personal</label>
+                        <input type="tel" class="form-control form-control-sm" id="nombre_personal" name="nombre_personal" aria-describedby="nombre_personal_help">
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
