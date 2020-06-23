@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta/edición de personal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Datos de servicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catálogos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="cliente.html"><i class="fa fa-car-side"></i>Cliente</a>
+                        <a class="dropdown-item" href="mascota.html"><i class="fa fa-list-alt"></i>Mascota</a>
+                        <a class="dropdown-item" href="personal.html"><i class="fa fa-users"></i>Personal</a>
+                        <a class="dropdown-item" href="servicios_adquiridos.html"><i class="fa fa-user-tie"></i>Servicios adquiridos</a>
+                        <a class="dropdown-item" href="detalle_servicios_adquiridos.html"><i class="fa fa-car"></i>Detalle servicios adquiridos</a>
+                        <a class="dropdown-item" href="servicio.html"><i class="fa fa-tools"></i>Servicio</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-users"></i> servicio
+                <a class="btn btn-ligth btn-sm float-rigth " href="servicio.html"><i class="fa fa-arrow-circle-left"> regresar</i></a>
+            </div>
+            <div class="card-body">
+                <form action="usuarios_guardar.php" method="post">
+                    <div class="form-group">
+                        <label for="Nombre_mascota">Nombre mascota</label>
+                        <input type="text" class="form-control form-control-sm" id="Nombre_mascota" name="Nombre_mascota" aria-describedby="Nombre_mascota_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="Desparasitación_Canina">Desparasitación Canina</label>
+                        <input type="text" class="form-control form-control-sm" id="Desparasitación_Canina" name="Desparasitación_Canina_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="Alimentación_Diaria">Alimentación Diaria</label>
+                        <input type="text" class="form-control form-control-sm" id="Alimentación_Diaria" name="Alimentación_Diaria" aria-describedby="Alimentación_Diaria_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="Metodo_Anti_pulgas">Metodo Anti pulgas</label>
+                        <input type="tel" class="form-control form-control-sm" id="Metodo_Anti_pulgas" name="Metodo_Anti_pulgas" aria-describedby="Metodo_Anti_pulgas_help">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_servicio">Numero de servicios</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio1" value="1_servicios">
+                            <label class="form-check-label" for="servicio1">1 Servicios</label>
+                            &nbsp;
+                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio2" value="2_servicios">
+                            <label class="form-check-label" for="servicio2">2 Servicios</label>
+                            &nbsp;
+                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio3" value="3_servicios">
+                            <label class="form-check-label" for="servicio3">3 Servicios</label>
+                            &nbsp;
+                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio4" value="4_servicios">
+                            <label class="form-check-label" for="servicio4">4 Servicios o mas</label>
+                          </div>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
