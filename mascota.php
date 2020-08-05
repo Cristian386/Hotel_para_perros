@@ -24,7 +24,7 @@
                                 <th style="width:20%;" scope="col">Raza</th>
                                 <th style="width:15%;" scope="col">Propietario</th>
                                 <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="mascota_formulario.html"><i class="fa fa-plus-circle"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="mascota_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -34,7 +34,7 @@
                                 <td scope="row">Pastor aleman</td>
                                 <td scope="row">Juan</td>
                                 <td>
-                                    <a class="btn btn-secondary btn-sm" href="mascota_formulario.html"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-secondary btn-sm" href="mascota_editar.php"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>

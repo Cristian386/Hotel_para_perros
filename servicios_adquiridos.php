@@ -27,7 +27,7 @@
                                 <th style="width:20%;" scope="col">Precio</th>
                                 </th>
                                 <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="servicios_adquiridos_formulario.html"><i class="fa fa-plus-circle"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="servicios_adquiridos_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -39,7 +39,7 @@
                                 <td scope="row">no</td>  
                                 <td scope="row">1800</td>
                                 <td>
-                                    <a class="btn btn-secondary btn-sm" href="servicios_adquiridos_formulario.html"fa fa-edit"></i></a>
+                                    <a class="btn btn-secondary btn-sm" href="servicios_adquiridos_editar.php"fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>

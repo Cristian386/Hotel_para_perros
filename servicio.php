@@ -24,7 +24,7 @@
                                 <th style="width:40%;" scope="col">Precio</th>
                                 </th>
                                 <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="servicio_formulario.html"><i class="fa fa-plus-circle"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="servicio_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -33,7 +33,7 @@
                                 <td scope="row">Desparacitacion</td>
                                 <td scope="row">500</td>
                                 <td>
-                                    <a class="btn btn-secondary btn-sm" href="servicio_formulario.html"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-secondary btn-sm" href="servicio_editar.php"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>

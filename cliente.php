@@ -25,7 +25,7 @@
                                 <th style="width:20%;" scope="col">Segundo apellido</th>
                                 <th style="width:15%;" scope="col">Telefono celular</th>
                                 <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="cliente_formulario.html"><i class="fa fa-plus-circle"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="cliente_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -36,7 +36,7 @@
                                 <td scope="row">Hernandez</td>
                                 <td scope="row">7222134515</td>
                                 <td>
-                                    <a class="btn btn-secondary btn-sm" href="cliente_formulario.html"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-secondary btn-sm" href="cliente_editar.php"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -48,7 +48,7 @@
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
-    </html>
+    </php>
     <?php
     
     ?>

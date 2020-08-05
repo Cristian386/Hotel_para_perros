@@ -13,7 +13,7 @@
         <div class="card">
             <div class="card-header">
                 <i class="fa fa-heart"></i> Mascotas
-                <a class="btn btn-ligth btn-sm float-rigth " href="mascota.html"><i class="fa fa-arrow-circle-left"> regresar</i></a>
+                <a class="btn btn-ligth btn-sm float-rigth " href="mascota.php"><i class="fa fa-arrow-circle-left"> regresar</i></a>
             </div>
             <div class="card-body">
                 <form action="usuarios_guardar.php" method="post">

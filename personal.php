@@ -24,7 +24,7 @@
                                 <th style="width:20%;" scope="col">Primer apellido</th>
                                 <th style="width:15%;" scope="col">Especialidad</th>
                                 <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="personal_formulario.html"><i class="fa fa-plus-circle"></i></a>
+                                    <a class="btn btn-primary btn-sm" href="personal_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -34,7 +34,7 @@
                                 <td scope="row">Ramirez</td>
                                 <td scope="row">Veterinario</td>
                                 <td>
-                                    <a class="btn btn-secondary btn-sm" href="personal_formulario.html"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-secondary btn-sm" href="personal_editar.php"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>

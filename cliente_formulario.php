@@ -13,7 +13,7 @@
         <div class="card">
             <div class="card-header">
                 <i class="fa fa-user"></i> Clientes
-                <a class="btn btn-ligth btn-sm float-rigth " href="cliente.html"><i class="fa fa-arrow-circle-left"> regresar</i></a>
+                <a class="btn btn-ligth btn-sm float-rigth " href="cliente.php"><i class="fa fa-arrow-circle-left"> regresar</i></a>
             </div>
             <div class="card-body">
                 <form action="usuarios_guardar.php" method="post">
