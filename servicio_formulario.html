@@ -47,36 +47,16 @@
             <div class="card-body">
                 <form action="usuarios_guardar.php" method="post">
                     <div class="form-group">
-                        <label for="Nombre_mascota">Nombre mascota</label>
-                        <input type="text" class="form-control form-control-sm" id="Nombre_mascota" name="Nombre_mascota" aria-describedby="Nombre_mascota_help">
+                        <label for="tipo_servicio">Tipo servicio</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_servicio" name="tipo_servicio" aria-describedby="tipo_servicio_help">
                     </div>
                     <div class="form-group">
-                        <label for="Desparasitación_Canina">Desparasitación Canina</label>
-                        <input type="text" class="form-control form-control-sm" id="Desparasitación_Canina" name="Desparasitación_Canina_help">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control form-control-sm" id="descripcion" name="descripcion_help">
                     </div>
                     <div class="form-group">
-                        <label for="Alimentación_Diaria">Alimentación Diaria</label>
-                        <input type="text" class="form-control form-control-sm" id="Alimentación_Diaria" name="Alimentación_Diaria" aria-describedby="Alimentación_Diaria_help">
-                    </div>
-                    <div class="form-group">
-                        <label for="Metodo_Anti_pulgas">Metodo Anti pulgas</label>
-                        <input type="tel" class="form-control form-control-sm" id="Metodo_Anti_pulgas" name="Metodo_Anti_pulgas" aria-describedby="Metodo_Anti_pulgas_help">
-                    </div>
-                    <div class="form-group">
-                        <label for="numero_servicio">Numero de servicios</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio1" value="1_servicios">
-                            <label class="form-check-label" for="servicio1">1 Servicios</label>
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio2" value="2_servicios">
-                            <label class="form-check-label" for="servicio2">2 Servicios</label>
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio3" value="3_servicios">
-                            <label class="form-check-label" for="servicio3">3 Servicios</label>
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="numero_servicio" id="servicio4" value="4_servicios">
-                            <label class="form-check-label" for="servicio4">4 Servicios o mas</label>
-                          </div>
+                        <label for="precio">Precio</label>
+                        <input type="int" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help">
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                 </form>
