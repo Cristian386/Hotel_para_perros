@@ -24,13 +24,12 @@
                         Catálogos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cliente.html"><i class="fa fa-user"></i>Cliente</a>
-                        <a class="dropdown-item" href="mascota.html"><i class="fa fa-heart"></i>Mascota</a>
-                        <a class="dropdown-item" href="personal.html"><i class="fa fa-users"></i>Personal</a>
-                        <a class="dropdown-item" href="servicios_adquiridos.html"><i class="fa fa-tools"></i>Servicios adquiridos</a>
-                        <a class="dropdown-item" href="detalle_servicios_adquiridos.html"><i class="fa fa-shopping-cart"></i>Detalle servicios adquiridos</a>
-                        <a class="dropdown-item" href="servicio.html"><i class="fa fa-shopping-bag"></i>Servicio</a>
-                        
+                        <a class="dropdown-item" href="cliente.php"><i class="fas fa-dog"></i>Cliente</a>
+                        <a class="dropdown-item" href="mascota.php"><i class="fas fa-paw"></i>Mascota</a>
+                        <a class="dropdown-item" href="personal.php"><i class="fa fa-users"></i>Personal</a>
+                        <a class="dropdown-item" href="servicios_adquiridos.php"><i class="fa fa-user-tie"></i>Servicios adquiridos</a>
+                        <a class="dropdown-item" href="servicio.php"><i class="fa fa-car"></i>Servicios</a>
+                        <a class="dropdown-item" href="citas.php"><i class="fas fa-address-card"></i>Citas</a>
                     </div>
                     
                 </li>

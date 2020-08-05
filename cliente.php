@@ -8,39 +8,8 @@
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">HOTEL PARA PERROS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="DogPark_CAC.html">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catalogos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cliente.html"><i class="fa fa-user"></i>Cliente</a>
-                        <a class="dropdown-item" href="mascota.html"><i class="fa fa-heart"></i>Mascota</a>
-                        <a class="dropdown-item" href="personal.html"><i class="fa fa-users"></i>Personal</a>
-                        <a class="dropdown-item" href="servicios_adquiridos.html"><i class="fa fa-tools"></i>Servicios adquiridos</a>
-                        <a class="dropdown-item" href="detalle_servicios_adquiridos.html"><i class="fa fa-shopping-cart"></i>Detalle servicios adquiridos</a>
-                        <a class="dropdown-item" href="servicio.html"><i class="fa fa-shopping-bag"></i>Servicio</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                
-            </form>
-        </div>
-    </nav>
-
-
-        <div class="container mt-4">
+<?php readfile('./menu.html'); ?>
+<div class="container mt-4">
             <div class="card">
                 <div class="card-header">
                     
