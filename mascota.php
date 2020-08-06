@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -29,14 +32,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope="row">Tobi</td>
-                                <td scope="row">Pastor aleman</td>
-                                <td scope="row">Juan</td>
-                                <td>
-                                    <a class="btn btn-secondary btn-sm" href="mascota_editar.php"><i class="fa fa-edit"></i></a>
-                                </td>
-                            </tr>
+                           
+                        <?php
+                        $sql = 'select id, nombre, raza, propietario from mascota order by nombre asc';
+                        foreach ($conn->query($sql) as $registro) {
+                            $registro['nombre'] = htmlentities($registro['nombre']);
+                            $registro['raza'] = htmlentities($registro['raza']);
+                            $registro['propietario'] = htmlentities($registro['propietario']);
+                        echo <<<fin
+
+                        <tr>
+                            <td scope="row">{$registro['nombre']}</td>
+                            <td scope="row">{$registro['raza']}</td>
+                            <td scope="row">{$registro['propietario']}</td>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="mascota_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+fin;
+                }
+                        ?>
+                                 
                         </tbody>
                     </table>
                 </div>
