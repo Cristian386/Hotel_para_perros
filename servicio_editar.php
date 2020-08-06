@@ -41,7 +41,7 @@ if (false == $cita) {
                 <a class="btn btn-ligth btn-sm float-rigth " href="servicio.php"><i class="fa fa-arrow-circle-left"> regresar</i></a>
             </div>
             <div class="card-body">
-                <form action="servicio_guardar.php" method="post">
+                <form action="servicio_actualizar.php" method="post">
                     <div class="form-group">
                         <label for="tipo_servicio">Tipo servicio</label>
                         <input type="text" class="form-control form-control-sm" id="tipo_servicio" name="tipo_servicio" aria-describedby="tipo_servicio_help" value="<?php echo htmlentities($cita['tipo_servicio']);?>" required>
@@ -55,6 +55,7 @@ if (false == $cita) {
                         <input type="int" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cita['precio']);?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                    <input type="hidden" name="id" value="<?php echo $cita['id'];?>">
                 </form>
             </div>
         </div>
