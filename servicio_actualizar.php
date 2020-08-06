@@ -1,4 +1,5 @@
 
+
 <?php
 if (
     !isset($_POST['tipo_servicio']) || empty($_POST['tipo_servicio'])
@@ -11,17 +12,20 @@ if (
 
 require_once './conexion.php';
 $sql = <<<fin
-updste servicio set
+update servicio set
     tipo_servicio = :tipo_servicio
     , descripcion = :descripcion
     , precio = :precio
+    where 
+    id = :id
 fin;
 $sentencia = $conn->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
     ':tipo_servicio' => $_POST['tipo_servicio']
     , ':descripcion' => $_POST['descripcion']
     , ':precio' => $_POST['precio']
+    , ':id' => $_POST['id']
+
 ]);
 header('Location: servicio.php?info=Cita realizada exitosamente');
 ?>
-
