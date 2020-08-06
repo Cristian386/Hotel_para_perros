@@ -36,5 +36,5 @@ $sentencia->execute([
     , ':id' => $_POST['id']
 
 ]);
-header('Location: cliente.php?info=Cliente registrado exitosamente');
+header('Location: cliente.php?info=Cita actualizada exitosamente');
 ?>
