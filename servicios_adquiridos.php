@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -24,7 +27,6 @@
                                 <th style="width:20%;" scope="col">Hoteleria</th>
                                 <th style="width:20%;" scope="col">Estetica</th>
                                 <th style="width:20%;" scope="col">Guarderia</th>
-                                <th style="width:20%;" scope="col">Precio</th>
                                 </th>
                                 <th style="width:10%;" scope="col">
                                     <a class="btn btn-primary btn-sm" href="servicios_adquiridos_formulario.php"><i class="fa fa-plus-circle"></i></a>
@@ -32,16 +34,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope="row">Negrito</td>
-                                <td scope="row">Si</td>
-                                <td scope="row">si</td>
-                                <td scope="row">no</td>  
-                                <td scope="row">1800</td>
-                                <td>
-                                    <a class="btn btn-secondary btn-sm" href="servicios_adquiridos_editar.php"fa fa-edit"></i></a>
-                                </td>
-                            </tr>
+                        <?php
+                        $sql = 'select id, nombre_mascota ,hoteleria, estetica , guarderia from servicio_adquirido order by nombre_mascota asc';
+                        foreach ($conn->query($sql) as $registro) {
+                            $registro['nombre_mascota'] = htmlentities($registro['nombre_mascota']);
+                            $registro['hoteleria'] = htmlentities($registro['hoteleria']);
+                            $registro['estetica'] = htmlentities($registro['estetica']);
+                            $registro['guarderia'] = htmlentities($registro['guarderia']);
+                        echo <<<fin
+
+                        <tr>
+                            <td scope="row">{$registro['nombre_mascota']}</td>
+                            <td scope="row">{$registro['hoteleria']}</td>
+                            <td scope="row">{$registro['estetica']}</td>
+                            <td scope="row">{$registro['guarderia']}</td>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="servicio_adquirido_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+fin;
+                }
+                        ?>
                         </tbody>
                     </table>
                 </div>
