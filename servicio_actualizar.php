@@ -11,7 +11,7 @@ if (
 
 require_once './conexion.php';
 $sql = <<<fin
-updste into servicio set
+updste servicio set
     tipo_servicio = :tipo_servicio
     , descripcion = :descripcion
     , precio = :precio
