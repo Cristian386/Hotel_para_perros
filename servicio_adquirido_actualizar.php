@@ -26,6 +26,7 @@ $sentencia->execute([
     , ':hoteleria' => $_POST['hoteleria']
     , ':estetica' => $_POST['estetica']
     , ':guarderia' => $_POST['guarderia']
+    , ':id' => $_POST['id']
 ]);
 header('Location: servicios_adquiridos.php?info=Servicio registrado exitosamente');
 ?>
