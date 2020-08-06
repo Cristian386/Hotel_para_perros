@@ -8,10 +8,7 @@ if (
     || !isset($_POST['localidad']) || empty($_POST['localidad']) 
     || !isset($_POST['telefono_celular']) || !is_array($_POST['telefono_celular'])
     || !isset($_POST['sexo']) || !in_array($_POST['sexo'], ['sexo1', 'sexo2'])
-) {
-    header('Location: cliente_formulario.php?info=Parámetros incorrectos');
-    exit;
-}
+) 
 
 require_once './conexion.php';
 $sql = <<<fin
