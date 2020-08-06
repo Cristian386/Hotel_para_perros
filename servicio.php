@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -29,11 +32,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope="row">Desparacitacion</td>
-                                <td scope="row">500</td>
-                                <td>
-                                    <a class="btn btn-secondary btn-sm" href="servicio_editar.php"><i class="fa fa-edit"></i></a>
+                        <?php
+                        $sql = 'select id, tipo_servicio, descripcion, precio from servicio order by tipo_servicio, precio asc';
+                        foreach ($conn->query($sql) as $registro) {
+                            $registro['descripcion'] = htmlentities($registro['descripcion']);
+                            $registro['precio'] = htmlentities($registro['precio']);
+                            
+                        echo <<<fin
+
+                        <tr>
+                            <td scope="row">{$registro['tipo_servicio']}</td>
+                            <td scope="row">{$registro['precio']}</td>
+                            
+                            
+                            
+                           
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="servicio_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+fin;
+                }
+                        ?>
                                 </td>
                             </tr>
                         </tbody>

@@ -1,3 +1,28 @@
+<?php
+if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
+    header('Location:citas.php');
+    exit;
+}
+require_once './conexion.php';
+$sql = <<<fin
+select
+    id
+    , tipo_servicio
+    , descripcion
+    , precio
+from
+    servicio
+where
+    id = :id
+fin;
+$sentencia = $conn->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
+$sentencia->execute([':id' => $_REQUEST['id']]);
+$cita = $sentencia->fetch(PDO::FETCH_ASSOC);
+if (false == $cita) {
+    header('Location: servicio.php?info=No se encontró la cita');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -19,15 +44,15 @@
                 <form action="servicio_guardar.php" method="post">
                     <div class="form-group">
                         <label for="tipo_servicio">Tipo servicio</label>
-                        <input type="text" class="form-control form-control-sm" id="tipo_servicio" name="tipo_servicio" aria-describedby="tipo_servicio_help">
+                        <input type="text" class="form-control form-control-sm" id="tipo_servicio" name="tipo_servicio" aria-describedby="tipo_servicio_help" value="<?php echo htmlentities($cita['tipo_servicio']);?>" required>
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripcion</label>
-                        <input type="text" class="form-control form-control-sm" id="descripcion" name="descripcion" aria-describedby="descripcion_help">
+                        <input type="text" class="form-control form-control-sm" id="descripcion" name="descripcion" aria-describedby="descripcion_help" value="<?php echo htmlentities($cita['descripcion']);?>" required>
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="int" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help">
+                        <input type="int" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cita['precio']);?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                 </form>
