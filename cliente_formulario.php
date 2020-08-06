@@ -16,7 +16,7 @@
                 <a class="btn btn-ligth btn-sm float-rigth " href="cliente.php"><i class="fa fa-arrow-circle-left"> regresar</i></a>
             </div>
             <div class="card-body">
-                <form action="usuarios_guardar.php" method="post">
+                <form action="cliente_guardar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help">
@@ -48,14 +48,15 @@
                     <div class="form-group">
                         <label for="sexo">Sexo</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Sexo" id="sexo1" value="Masculino">
-                            <label class="form-check-label" for="sexo1">Masculino</label>
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo1" value="femenino">
+                            <label class="form-check-label" for="sexo1">Femenino</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="Sexo" id="sexo2" value="Femenino">
-                            <label class="form-check-label" for="sexo2">Femenino</label>
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="masculino">
+                            <label class="form-check-label" for="sexo2">Masculino</label>
                           </div>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                    
                 </form>
             </div>
         </div>
