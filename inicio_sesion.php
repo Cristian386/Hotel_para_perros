@@ -1,10 +1,12 @@
 <?php
+//print_r($_POST);
+//exit;
 if (
     !isset($_POST['correo']) 
     || empty($_POST['correo'])
     || !filter_var($_POST['correo'], FILTER_VALIDATE_EMAIL) 
     || !isset($_POST['contrasena'])
-    || !empty($_POST['contrasena'])
+    || empty($_POST['contrasena'])
     ) {
     header('Location: index.php? info=Escribe tu correo y contraseña');
     exit;    

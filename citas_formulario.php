@@ -1,3 +1,7 @@
+<?php
+require_once './revisa_sesion.php';
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>

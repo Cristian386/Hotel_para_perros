@@ -1,4 +1,8 @@
 <?php
+require_once './revisa_sesion.php';
+require_once './conexion.php';
+?>
+<?php
 if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
     header('Location:servicios_adquiridos.php');
     exit;

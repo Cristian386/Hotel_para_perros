@@ -1,4 +1,8 @@
 <?php
+require_once './revisa_sesion.php';
+require_once './conexion.php';
+?>
+<?php
 if (
     !isset($_POST['nombre']) || empty($_POST['nombre'])
     || !isset($_POST['raza']) || empty($_POST['raza'])
