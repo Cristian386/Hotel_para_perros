@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
-<body background="img/musica.jpg" class="card bg-dark text-white" alt="Responsive image">
+<body background="img/30.jpg" class="card bg-dark text-white" alt="Responsive image">
     <div class="container mt-3">
         <div class="card-img-overlay">
             <div class="card-header">
-                <i class="fa fa-heart"></i> <h1>Inicio de sesion</h1>
+                <i class="fa fa-heart"></i> <h3>Inicio de sesion</h3>
             </div>
             <div class="card-body">  
                 <form action="inicio_sesion.php" method="post">
                     <div class="form-group">
                         <label for="correo"><h5>Correo electronico </h5></label>
-                        <input type="email" class="form-control form-control-sm" id="correo" name="correo" required>
+                        <input type="email" class="form-text text-muted" id="correo" name="correo" required>
                     </div>
                     <div class="form-group">
                         <label for="contrasena"><h5>Contraseña<h5></label>
                         <input type="password" class="form-control form-control-sm" id="contrasena" name="contrasena" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> Enviar</button>
-                    <a href="registrar_sesion.php" class="btn btn-primary">Registrarse</a>
+                    <a href="registrar_sesion.php" class="btn btn-primary btn-sm">Registrarse</a>
                 </form>
             </div>
         </div>
@@ -32,4 +32,6 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+</body>
 </html>
+
