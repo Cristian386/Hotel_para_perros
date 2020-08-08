@@ -25,7 +25,6 @@ require_once './conexion.php';
                             <tr>
                                 <th style="width:20%;" scope="col">Nombre</th>
                                 <th style="width:20%;" scope="col">Raza</th>
-                                <th style="width:15%;" scope="col">Propietario</th>
                                 <th style="width:10%;" scope="col">
                                     <a class="btn btn-primary btn-sm" href="mascota_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
@@ -34,17 +33,15 @@ require_once './conexion.php';
                         <tbody>
                            
                         <?php
-                        $sql = 'select id, nombre, raza, propietario from mascota order by nombre asc';
+                        $sql = 'select id, nombre, raza from mascota order by nombre asc';
                         foreach ($conn->query($sql) as $registro) {
                             $registro['nombre'] = htmlentities($registro['nombre']);
                             $registro['raza'] = htmlentities($registro['raza']);
-                            $registro['propietario'] = htmlentities($registro['propietario']);
                         echo <<<fin
 
                         <tr>
                             <td scope="row">{$registro['nombre']}</td>
                             <td scope="row">{$registro['raza']}</td>
-                            <td scope="row">{$registro['propietario']}</td>
                             <td>
                                 <a class="btn btn-secondary btn-sm" href="mascota_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
                             </td>

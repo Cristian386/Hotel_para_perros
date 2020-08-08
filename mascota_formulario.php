@@ -32,10 +32,6 @@ require_once './conexion.php';
                         <label for="fecha_nacimiento">Fecha de nacimiento</label>
                         <input type="text" class="form-control form-control-sm" id="fecha_nacimiento" name="fecha_nacimiento" aria-describedby="fecha_nacimiento_help">
                     </div>
-                    <div class="form-group">
-                        <label for="propietario">Propietario</label>
-                        <input type="text" class="form-control form-control-sm" id="propietario" name="propietario" aria-describedby="propietario_help">
-                    </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                 </form>
             </div>
