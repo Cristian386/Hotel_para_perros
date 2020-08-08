@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -30,12 +33,24 @@
                         <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido_help">
                     </div>
                     <div class="form-group">
-                        <label for="estado">Estado</label>
-                        <input type="text" class="form-control form-control-sm" id="estado" name="estado" aria-describedby="estado_help">
+                        <label for="estado_id">Estado</label>
+                        <select class="form-control form-control-sm" id="estado_id" name="estado_id" aria-describedby="estado_id_help">
+                        <option value="" selected>Selecciona</option>
+                        <?php
+                        $sql = 'select id, estado from estados order by estado asc';
+                        foreach($conn->query($sql) as $registro){
+                            echo <<<fin
+                            <option value="{$registro['id']}">{$registro['estado']} </option>
+fin;
+                        }
+                        ?>
+                    </select> 
                     </div>
                     <div class="form-group">
-                        <label for="municipio">Municipio</label>
-                        <input type="text" class="form-control form-control-sm" id="municipio" name="municipio" aria-describedby="municipio_help">
+                        <label for="municipio_id">Municipio</label>
+                        <select type="text" class="form-control form-control-sm" id="municipio_id" name="municipio_id">
+                            <option value="" selected>Selecciona</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="localidad">Localidad</label>
@@ -56,12 +71,18 @@
                           </div>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
-                    
                 </form>
             </div>
         </div>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function(e) {
+        $('#estado_id').change(function (e) {
+        $('#municipio_id').load('estados_municipios.php?estado_id=' + $(this).val());
+        })
+    })
+    </script>
 </body>
 </html>

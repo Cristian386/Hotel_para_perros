@@ -38,7 +38,7 @@ $sentencia->execute([
     , ':telefono_oficina' => $_POST['telefono_oficina']
     , ':numero_celular' => $_POST['numero_celular']
     , ':correo' => $_POST['correo']
-    , ':contrasena' => $_POST['contrasena']
+    , ':contrasena' => password_hash($_POST['contrasena'], PASSWORD_BCRYPT, ['cost' =>12])
     , ':tipo' => $_POST['tipo']
     , ':dias_cita' => implode(',', $_POST['dias_cita'])
     , ':apartado' => $_POST['apartado']
