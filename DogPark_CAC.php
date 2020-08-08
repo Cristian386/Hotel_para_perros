@@ -13,40 +13,7 @@ require_once './conexion.php';
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Citas de servicio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catálogos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="cliente.php"><i class="fas fa-dog"></i>Cliente</a>
-                        <a class="dropdown-item" href="mascota.php"><i class="fas fa-paw"></i>Mascota</a>
-                        <a class="dropdown-item" href="personal.php"><i class="fa fa-users"></i>Personal</a>
-                        <a class="dropdown-item" href="servicios_adquiridos.php"><i class="fa fa-user-tie"></i>Servicios adquiridos</a>
-                        <a class="dropdown-item" href="servicio.php"><i class="fa fa-car"></i>Servicios</a>
-                        <a class="dropdown-item" href="citas.php"><i class="fas fa-address-card"></i>Citas</a>
-                    </div>
-                    
-                </li>
-                
-            </ul>
-            
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="buscar">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">buscar</button>
-            </form>
-        </div>
-        
-    </nav>
+<?php readfile('./menu.html'); ?>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
