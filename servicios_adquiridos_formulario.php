@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -17,9 +20,19 @@
             </div>
             <div class="card-body">
                 <form action="servicio_adquirido_guardar.php" method="post">
-                    <div class="form-group">
-                        <label for="nombre_mascota">Nombre mascota</label>
-                        <input type="text" class="form-control form-control-sm" id="nombre_mascota" name="nombre_mascota" aria-describedby="nombre_mascota_help">
+                <div class="form-group">
+                        <label for="mascota_id">Mascota</label>
+                        <select class="form-control form-control-sm" id="mascota_id" name="mascota_id">
+                        <option value="" selected>Selecciona</option>
+                        <?php
+                        $sql = 'select id, nombre from mascota order by nombre asc';
+                        foreach($conn->query($sql) as $registro){
+                            echo <<<fin
+                            <option value="{$registro['id']}">{$registro['nombre']} </option>
+fin;
+                        }
+                        ?>
+                    </select> 
                     </div>
                     <div class="form-group">
                         <label for="hoteleria">Hoteleria</label><br>

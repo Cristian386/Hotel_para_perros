@@ -1,3 +1,6 @@
+<?php
+require_once './revisa_sesion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -212,6 +215,4 @@
                 <path d="M7 10h2v4H7v-4z"/>
                 <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
               </svg>
-        
-   
-</html>
+  </html>
