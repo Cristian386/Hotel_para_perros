@@ -12,6 +12,8 @@ require_once './conexion.php';
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
+
+
     <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
         <div class="card">
