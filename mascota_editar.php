@@ -66,8 +66,8 @@ fin;
                     </select> 
                     </div>
                     <div class="form-group">
-                        <label for="fecha_nacimiento">Fecha nacimiento</label>
-                        <input type="text" class="form-control form-control-sm" id="fecha_nacimiento" name="fecha_nacimiento" aria-describedby="fecha_nacimiento_help" value="<?php echo htmlentities($cita['fecha_nacimiento']);?>" required>
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="fecha_nacimiento" step="1" min="1980-01-01" max="2100-12-31" value="<?php echo date("Y-m-d");?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                     <input type="hidden" name="id" value="<?php echo $cita['id'];?>">
