@@ -4,31 +4,36 @@ require_once './conexion.php';
 ?>
 <?php
 if (
-    !isset($_POST['nombre_mascota']) || empty($_POST['nombre_mascota'])
+    !isset($_POST['mascota_id']) || empty($_POST['mascota_id'])
     || !isset($_POST['hoteleria']) || empty($_POST['hoteleria'])
     || !isset($_POST['estetica']) || empty($_POST['estetica'])
-    || !isset($_POST['guarderia']) || empty($_POST['guarderia'])
-) {
-    header('Location: servicios_adquiridos_formulario.php?info=Parámetros incorrectos');
-    exit;
-}
+    || !isset($_POST['guarderia1']) || empty($_POST['guarderia1'])
+    || !isset($_POST['guarderia2']) || empty($_POST['guarderia2'])
+    || !isset($_POST['subtotal']) || empty($_POST['subtotal'])
+) 
+
+
 
 require_once './conexion.php';
 $sql = <<<fin
 update servicio_adquirido set
-    nombre_mascota = :nombre_mascota
+    mascota_id = :mascota_id
     , hoteleria = :hoteleria
     , estetica = :estetica
-    , guarderia = :guarderia
+    , guarderia1 = :guarderia1
+    , guarderia2 = :guarderia2
+    , subtotal = :subtotal
     where
     id = :id
 fin;
 $sentencia = $conn->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
-    ':nombre_mascota' => $_POST['nombre_mascota']
+    ':mascota_id' => $_POST['mascota_id']
     , ':hoteleria' => $_POST['hoteleria']
     , ':estetica' => $_POST['estetica']
-    , ':guarderia' => $_POST['guarderia']
+    , ':guarderia1' => $_POST['guarderia1']
+    , ':guarderia2' => $_POST['guarderia2']
+    , ':subtotal' => $_POST['subtotal']
     , ':id' => $_POST['id']
 ]);
 header('Location: servicios_adquiridos.php?info=Servicio registrado exitosamente');

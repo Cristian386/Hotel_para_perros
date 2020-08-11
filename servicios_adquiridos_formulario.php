@@ -56,16 +56,23 @@ fin;
                           </div>
                     </div>
                     <div class="form-group">
-                        <label for="guarderia">Guarderia</label><br>
+                        <label for="guarderia1">Guarderia 6 horas</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="guarderia" id="tipo_1" value="6 horas">
-                            <label class="form-check-label" for="tipo_1">6 horas</label>
+                            <input class="form-check-input" type="radio" name="guarderia1" id="si" value="si">
+                            <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="guarderia" id="tipo_2" value="12 horas">
-                            <label class="form-check-label" for="tipo_2">12 horas</label>
+                            <input class="form-check-input" type="radio" name="guarderia1" id="no" value="no">
+                            <label class="form-check-label" for="no">No</label>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guarderia2">Guarderia 12 horas</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="guarderia2" id="si" value="si">
+                            <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="guarderia" id="tipo_3" value="no">
-                            <label class="form-check-label" for="tipo_3">No</label>
+                            <input class="form-check-input" type="radio" name="guarderia2" id="no" value="no">
+                            <label class="form-check-label" for="no">No</label>
                           </div>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
