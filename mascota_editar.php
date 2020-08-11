@@ -12,9 +12,8 @@ $sql = <<<fin
 select
     id
     , nombre
-    , raza
+    , raza_id
     , fecha_nacimiento
-    , propietario
 from
     mascota
 where
@@ -53,8 +52,18 @@ if (false == $cita) {
                         <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help" value="<?php echo htmlentities($cita['nombre']);?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="raza">Raza</label>
-                        <input type="text" class="form-control form-control-sm" id="raza" name="raza" aria-describedby="raza_help" value="<?php echo htmlentities($cita['raza']);?>" required>
+                        <label for="raza_id">raza</label>
+                        <select class="form-control form-control-sm" id="raza_id" name="raza_id" aria-describedby="raza_id_help">
+                        <option value="" selected>Selecciona</option>
+                        <?php
+                        $sql = 'select id, nombre from raza order by nombre asc';
+                        foreach($conn->query($sql) as $registro){
+                            echo <<<fin
+                            <option value="{$registro['id']}">{$registro['nombre']} </option>
+fin;
+                        }
+                        ?>
+                    </select> 
                     </div>
                     <div class="form-group">
                         <label for="fecha_nacimiento">Fecha nacimiento</label>

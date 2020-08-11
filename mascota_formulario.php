@@ -26,8 +26,18 @@ require_once './conexion.php';
                         <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help">
                     </div>
                     <div class="form-group">
-                        <label for="raza">Raza</label>
-                        <input type="text" class="form-control form-control-sm" id="raza" name="raza" aria-describedby="raza_help">
+                        <label for="raza_id">raza</label>
+                        <select class="form-control form-control-sm" id="raza_id" name="raza_id" aria-describedby="raza_id_help">
+                        <option value="" selected>Selecciona</option>
+                        <?php
+                        $sql = 'select id, nombre from raza order by nombre asc';
+                        foreach($conn->query($sql) as $registro){
+                            echo <<<fin
+                            <option value="{$registro['id']}">{$registro['nombre']} </option>
+fin;
+                        }
+                        ?>
+                    </select> 
                     </div>
                     <div class="form-group">
                         <label for="fecha_nacimiento">Fecha de nacimiento</label>
