@@ -24,17 +24,16 @@ require_once './conexion.php';
                     <table class="table table-striped table-hover table-sm">
                         <thead class="thead-dark">
                             <tr>
-                                <th style="width:50%;" scope="col">Tipo servicio</th>
-                                <th style="width:40%;" scope="col">Precio</th>
+                                <th style="width:30%;" scope="col">Tipo servicio</th>
+                                <th style="width:50%;" scope="col">Descripcion</th>
+                                <th style="width:20%;" scope="col">Precio</th>
                                 </th>
-                                <th style="width:10%;" scope="col">
-                                    <a class="btn btn-primary btn-sm" href="servicio_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                         <?php
-                        $sql = 'select id, tipo_servicio, descripcion, precio from servicio order by tipo_servicio, precio asc';
+                        $sql = 'select id, tipo_servicio, descripcion, precio from servicio order by tipo_servicio asc';
                         foreach ($conn->query($sql) as $registro) {
                             $registro['descripcion'] = htmlentities($registro['descripcion']);
                             $registro['precio'] = htmlentities($registro['precio']);
@@ -43,14 +42,9 @@ require_once './conexion.php';
 
                         <tr>
                             <td scope="row">{$registro['tipo_servicio']}</td>
+                            <td scope="row">{$registro['descripcion']}</td>
                             <td scope="row">{$registro['precio']}</td>
-                            
-                            
-                            
-                           
-                            <td>
-                                <a class="btn btn-secondary btn-sm" href="servicio_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
-                            </td>
+
                         </tr>
 fin;
                 }

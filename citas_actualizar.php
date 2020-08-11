@@ -46,6 +46,7 @@ $sentencia->execute([
     , ':tipo' => $_POST['tipo']
     , ':dias_cita' => implode(',', $_POST['dias_cita'])
     , ':apartado' => $_POST['apartado']
+    , ':id' => $_POST['id']
     
 ]);
 header('Location: citas.php?info=Cita realizada exitosamente');

@@ -36,7 +36,7 @@ require_once './conexion.php';
                         <tbody>
                            
                         <?php
-                        $sql = 'select id, nombre, primer_apellido, segundo_apellido, telefono_celular from cliente order by primer_apellido, nombre asc';
+                        $sql = 'select id, nombre, primer_apellido, segundo_apellido, telefono_celular from cliente order by nombre asc';
                         foreach ($conn->query($sql) as $registro) {
                             $registro['nombre'] = htmlentities($registro['nombre']);
                             $registro['primer_apellido'] = htmlentities($registro['primer_apellido']);
