@@ -11,12 +11,12 @@ require_once './conexion.php';
 $sql = <<<fin
 select
     id
-    , mascota_id
+    , nombre
     , hoteleria
     , estetica
     , guarderia1
     , guarderia2
-    , subtotal
+    
 from
     servicio_adquirido
 where
@@ -56,56 +56,47 @@ require_once './conexion.php';
             <div class="card-body">
                 <form action="servicio_adquirido_actualizar.php" method="post">
                 <div class="form-group">
-                        <label for="mascota_id">Mascota</label>
-                        <select class="form-control form-control-sm" id="mascota_id" name="mascota_id"  value="<?php echo htmlentities($cita['mascota_id']);?>" required>
-                        <option value="" selected>Selecciona</option>
-                        <?php
-                        $sql = 'select id, nombre from mascota order by nombre asc';
-                        foreach($conn->query($sql) as $registro){
-                            echo <<<fin
-                            <option value="{$registro['id']}">{$registro['nombre']} </option>
-fin;
-                        }
-                        ?>
-                    </select> 
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help" required value="<?php echo htmlentities($cita['nombre']);?>" required>
+                    
                     </div>
                     <div class="form-group">
                         <label for="hoteleria">Hoteleria</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="hoteleria" id="si" value="si" <?php echo 'si' == $cita['hoteleria'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="hoteleria" id="si" value="1500" <?php echo '1500' == $cita['hoteleria'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="hoteleria" id="no" value="no" <?php echo 'no' == $cita['hoteleria'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="hoteleria" id="no" value="0" <?php echo '0' == $cita['hoteleria'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="no">No</label>
                           </div>
                     </div>
                     <div class="form-group">
                         <label for="estetica">Estetica</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="estetica" id="si" value="si" <?php echo 'si' == $cita['estetica'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="estetica" id="si" value="500" <?php echo '500' == $cita['estetica'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="estetica" id="no" value="no" <?php echo 'no' == $cita['estetica'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="estetica" id="no" value="0" <?php echo '0' == $cita['estetica'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="no">No</label>
                           </div>
                     </div>
                     <div class="form-group">
                         <label for="guarderia1">Guarderia 6 horas</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="guarderia1" id="si" value="si" <?php echo 'si' == $cita['guarderia1'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="guarderia1" id="si" value="600" <?php echo '600' == $cita['guarderia1'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="guarderia1" id="no" value="no" <?php echo 'no' == $cita['guarderia1'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="guarderia1" id="no" value="0" <?php echo '0' == $cita['guarderia1'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="no">No</label>
                           </div>
                     </div>
                     <div class="form-group">
                         <label for="guarderia2">Guarderia 12 horas</label><br>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="guarderia2" id="si" value="si" <?php echo 'si' == $cita['guarderia2'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="guarderia2" id="si" value="1200" <?php echo '1200' == $cita['guarderia2'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="si">Si</label>
                             &nbsp;
-                            <input class="form-check-input" type="radio" name="guarderia2" id="no" value="no" <?php echo 'no' == $cita['guarderia2'] ? 'checked' : ''; ?>>
+                            <input class="form-check-input" type="radio" name="guarderia2" id="no" value="0" <?php echo '0' == $cita['guarderia2'] ? 'checked' : ''; ?>>
                             <label class="form-check-label" for="no">No</label>
                           </div>
                     </div>
