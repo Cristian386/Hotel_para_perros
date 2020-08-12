@@ -20,7 +20,7 @@ require_once './conexion.php';
                 <a class="btn btn-ligth btn-sm float-rigth " href="personal.php"><i class="fa fa-arrow-circle-left"> regresar</i></a>
             </div>
             <div class="card-body">
-                <form action="usuarios_guardar.php" method="post">
+                <form action="personal_guardar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help">

@@ -28,19 +28,32 @@ require_once './conexion.php';
                                 <th style="width:20%;" scope="col">Primer apellido</th>
                                 <th style="width:15%;" scope="col">Especialidad</th>
                                 <th style="width:10%;" scope="col">
+
                                     <a class="btn btn-primary btn-sm" href="personal_formulario.php"><i class="fa fa-plus-circle"></i></a>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td scope="row">Sergio</td>
-                                <td scope="row">Ramirez</td>
-                                <td scope="row">Veterinario</td>
-                                <td>
-                                    <a class="btn btn-secondary btn-sm" href="personal_editar.php"><i class="fa fa-edit"></i></a>
-                                </td>
-                            </tr>
+                        <?php
+                        $sql = 'select id, nombre, primer_apellido, especialidad from personal order by nombre asc';
+                        foreach ($conn->query($sql) as $registro) {
+                            $registro['nombre'] = htmlentities($registro['nombre']);
+                            $registro['primer_apellido'] = htmlentities($registro['primer_apellido']);
+                            $registro['especialidad'] = htmlentities($registro['especialidad']);
+                        echo <<<fin
+
+                        <tr>
+                            <td scope="row">{$registro['nombre']}</td>
+                            <td scope="row">{$registro['primer_apellido']}</td>
+                            <td scope="row">{$registro['especialidad']}</td>
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="personal_editar.php?id={$registro['id']}"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+fin;
+                }
+                        ?>
+                             
                         </tbody>
                     </table>
                 </div>
